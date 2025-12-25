@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Gacha Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎰 GACHA GAME</h1>
+
+<div class="btns">
+    <button onclick="startGacha(1)">Gacha 1x</button>
+    <button onclick="startGacha(5)">Gacha 5x</button>
+</div>
+
+<!-- LAYAR GACHA -->
+<div id="overlay" class="overlay hidden">
+    <div class="gachaBox">
+        <h2 id="infoText">CLICK CARD</h2>
+        <div id="singleCard" class="card">CLICK</div>
+        <button id="nextBtn" class="hidden">NEXT</button>
+    </div>
+</div>
+
+<!-- HASIL AKHIR -->
+<div id="resultScreen" class="overlay hidden">
+    <div class="resultBox">
+        <h2>HASIL GACHA</h2>
+        <div id="resultCards" class="resultCards"></div>
+        <button onclick="closeResult()">OK</button>
+    </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="soundNormal" src="sounds/normal.mp3"></audio>
+<audio id="soundRare" src="sounds/rare.mp3"></audio>
+<audio id="soundSSR" src="sounds/ssr.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
